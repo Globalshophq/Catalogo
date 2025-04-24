@@ -1,3 +1,4 @@
+<!-- Guarda este archivo como "index.html" en la raíz de tu repositorio -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -11,57 +12,58 @@
   <header class="bg-white shadow">
     <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
       <h1 class="text-3xl font-bold text-gray-900">Catálogo de Productos</h1>
-      <p class="mt-2 text-gray-600">Explora nuestra variedad de artículos disponibles. </p>
+      <p class="mt-2 text-gray-600">Explora nuestra variedad de artículos disponibles.</p>
     </div>
   </header>
   <main class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
     <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Las tarjetas de productos se generarán aquí -->
+      <!-- Tarjetas generadas dinámicamente -->
     </div>
   </main>
 
   <script>
+    // Asegúrate de que la carpeta de imágenes se llame exactamente "catalogo_pagina"
     const products = [
-      { name: 'Anillo camelia', image: 'catalogo pagina/1.png', retailPrice: 0.50, wholesalePrice: 0.38, bulkPrice: 0.30 },
-      { name: 'Anillo alas de ángel y demonio', image: 'catalogo pagina/2(2).png', retailPrice: 2.00, wholesalePrice: 1.50, bulkPrice: 1.20 },
-      { name: 'Medias de imán', image: 'catalogo pagina/2.png', retailPrice: 3.00, wholesalePrice: 2.25, bulkPrice: 1.80 },
-      { name: 'Collar de tulipán (acero inoxidable)', image: 'catalogo pagina/3.png', retailPrice: 5.00, wholesalePrice: 3.75, bulkPrice: 3.00 },
-      { name: 'Anillo serpiente', image: 'catalogo pagina/3.png', retailPrice: 1.00, wholesalePrice: 0.75, bulkPrice: 0.60 },
-      { name: 'Gomitas antiestrés', image: 'catalogo pagina/4.png', retailPrice: 1.00, wholesalePrice: 0.75, bulkPrice: 0.60 },
-      { name: 'Pinzas hawaianas', image: 'catalogo pagina/4.png', retailPrice: 1.00, wholesalePrice: 0.75, bulkPrice: 0.60 },
-      { name: 'Giroscopio', image: 'catalogo pagina/5.png', retailPrice: 2.00, wholesalePrice: 1.50, bulkPrice: 1.20 },
-      { name: 'Conjunto deportivo Berserk', image: 'catalogo pagina/5.png', retailPrice: 18.00, wholesalePrice: 13.50, bulkPrice: 10.80 },
-      { name: 'Mini pinzas hawaianas', image: 'catalogo pagina/6.png', retailPrice: 1.00, wholesalePrice: 0.75, bulkPrice: 0.60 },
-      { name: 'Cofre de luz para joyería', image: 'catalogo pagina/6.png', retailPrice: 6.00, wholesalePrice: 4.50, bulkPrice: 3.60 },
-      { name: 'Estuches para joyería', image: 'catalogo pagina/7.png', retailPrice: 1.00, wholesalePrice: 0.75, bulkPrice: 0.60 },
-      { name: 'Set de accesorios para mujer', image: 'catalogo pagina/7.png', retailPrice: 10.00, wholesalePrice: 7.50, bulkPrice: 6.00 },
-      { name: 'Pulsera punk', image: 'catalogo pagina/8.png', retailPrice: 3.50, wholesalePrice: 2.62, bulkPrice: 2.10 },
-      { name: 'Pinzas para el cabello', image: 'catalogo pagina/8.png', retailPrice: 1.20, wholesalePrice: 0.90, bulkPrice: 0.72 },
-      { name: 'Set de girasol', image: 'catalogo pagina/9.png', retailPrice: 8.00, wholesalePrice: 6.00, bulkPrice: 4.80 },
-      { name: 'Caja de regalo con flor eterna', image: 'catalogo pagina/9.png', retailPrice: 10.00, wholesalePrice: 7.50, bulkPrice: 6.00 },
-      { name: 'Protector de tarjeta', image: 'catalogo pagina/10.png', retailPrice: 1.00, wholesalePrice: 0.75, bulkPrice: 0.60 },
-      { name: 'Anillo princesa', image: 'catalogo pagina/10.png', retailPrice: 1.00, wholesalePrice: 0.75, bulkPrice: 0.60 },
-      { name: 'Collar trébol', image: 'catalogo pagina/11.png', retailPrice: 7.00, wholesalePrice: 5.25, bulkPrice: 4.20 },
-      { name: 'Lentes', image: 'catalogo pagina/11.png', retailPrice: 3.00, wholesalePrice: 2.25, bulkPrice: 1.80 },
-      { name: 'Pulsera trébol', image: 'catalogo pagina/12.png', retailPrice: 5.00, wholesalePrice: 3.75, bulkPrice: 3.00 },
-      { name: 'Vendas para boxeo', image: 'catalogo pagina/12.png', retailPrice: 8.00, wholesalePrice: 6.00, bulkPrice: 4.80 },
-      { name: 'Anillos de gato para pareja', image: 'catalogo pagina/13.png', retailPrice: 2.00, wholesalePrice: 1.50, bulkPrice: 1.20 },
-      { name: 'Gorro satín', image: 'catalogo pagina/13.jpg', retailPrice: 3.00, wholesalePrice: 2.25, bulkPrice: 1.80 },
-      { name: 'Collar de gato para parejas', image: 'catalogo pagina/14.jpg', retailPrice: 5.00, wholesalePrice: 3.75, bulkPrice: 3.00 },
-      { name: 'Medias de tulipán', image: 'catalogo pagina/14.jpg', retailPrice: 2.00, wholesalePrice: 1.50, bulkPrice: 1.20 },
-      { name: 'Collar de tulipán ($4)', image: 'catalogo pagina/15.jpg', retailPrice: 4.00, wholesalePrice: 3.00, bulkPrice: 2.40 },
-      { name: 'Medias meme', image: 'catalogo pagina/15.jpg', retailPrice: 2.00, wholesalePrice: 1.50, bulkPrice: 1.20 },
-      { name: 'Lomo Cards', image: 'catalogo pagina/16.jpg', retailPrice: 5.00, wholesalePrice: 3.75, bulkPrice: 3.00 },
-      { name: 'Collar de princesa', image: 'catalogo pagina/16.jpg', retailPrice: 5.00, wholesalePrice: 3.75, bulkPrice: 3.00 },
-      { name: 'Zarcillos de tulipán', image: 'catalogo pagina/17.jpg', retailPrice: 3.00, wholesalePrice: 2.25, bulkPrice: 1.80 },
-      { name: 'Guantes de MMA', image: 'catalogo pagina/17.jpg', retailPrice: 15.00, wholesalePrice: 11.25, bulkPrice: 9.00 },
-      { name: 'Reloj de bolsillo Gravity Falls', image: 'catalogo pagina/18.jpg', retailPrice: 6.00, wholesalePrice: 4.50, bulkPrice: 3.60 },
-      { name: 'Diadema', image: 'catalogo pagina/18.jpg', retailPrice: 2.00, wholesalePrice: 1.50, bulkPrice: 1.20 },
-      { name: 'Anillos de acero inoxidable', image: 'catalogo pagina/19.jpg', retailPrice: 2.00, wholesalePrice: 1.50, bulkPrice: 1.20 },
-      { name: 'Pulseras de gato para parejas', image: 'catalogo pagina/20.jpg', retailPrice: 3.00, wholesalePrice: 2.25, bulkPrice: 1.80 },
-      { name: 'Estuches para joyería ($1.50)', image: 'catalogo pagina/21.jpg', retailPrice: 1.50, wholesalePrice: 1.12, bulkPrice: 0.90 },
-      { name: 'Bolsas de regalo', image: 'catalogo pagina/22.jpg', retailPrice: 1.00, wholesalePrice: 0.75, bulkPrice: 0.60 },
-      { name: 'Posters', image: 'catalogo pagina/23.jpg', retailPrice: 1.00, wholesalePrice: 0.75, bulkPrice: 0.60 }
+      { name: 'Anillo camelia', image: 'catalogo_pagina/1.jpg', retailPrice: 0.50, wholesalePrice: 0.38, bulkPrice: 0.30 },
+      { name: 'Anillos alas de ángel y demonio', image: 'catalogo_pagina/2.jpg', retailPrice: 2.00, wholesalePrice: 1.50, bulkPrice: 1.20 },
+      { name: 'Medias de imán', image: 'catalogo_pagina/2.jpg', retailPrice: 3.00, wholesalePrice: 2.25, bulkPrice: 1.80 },
+      { name: 'Collar de tulipán (acero inoxidable)', image: 'catalogo_pagina/3.jpg', retailPrice: 5.00, wholesalePrice: 3.75, bulkPrice: 3.00 },
+      { name: 'Anillo serpiente', image: 'catalogo_pagina/3.jpg', retailPrice: 1.00, wholesalePrice: 0.75, bulkPrice: 0.60 },
+      { name: 'Gomitas antiestrés', image: 'catalogo_pagina/4.jpg', retailPrice: 1.00, wholesalePrice: 0.75, bulkPrice: 0.60 },
+      { name: 'Pinzas hawaianas', image: 'catalogo_pagina/4.jpg', retailPrice: 1.00, wholesalePrice: 0.75, bulkPrice: 0.60 },
+      { name: 'Giroscopio', image: 'catalogo_pagina/5.jpg', retailPrice: 2.00, wholesalePrice: 1.50, bulkPrice: 1.20 },
+      { name: 'Conjunto deportivo Berserk', image: 'catalogo_pagina/5.jpg', retailPrice: 18.00, wholesalePrice: 13.50, bulkPrice: 10.80 },
+      { name: 'Mini pinzas hawaianas', image: 'catalogo_pagina/6.jpg', retailPrice: 1.00, wholesalePrice: 0.75, bulkPrice: 0.60 },
+      { name: 'Cofre de luz para joyería', image: 'catalogo_pagina/6.jpg', retailPrice: 6.00, wholesalePrice: 4.50, bulkPrice: 3.60 },
+      { name: 'Estuches para joyería', image: 'catalogo_pagina/7.jpg', retailPrice: 1.00, wholesalePrice: 0.75, bulkPrice: 0.60 },
+      { name: 'Set de accesorios para mujer', image: 'catalogo_pagina/7.jpg', retailPrice: 10.00, wholesalePrice: 7.50, bulkPrice: 6.00 },
+      { name: 'Pulsera punk', image: 'catalogo_pagina/8.jpg', retailPrice: 3.50, wholesalePrice: 2.62, bulkPrice: 2.10 },
+      { name: 'Pinzas para el cabello', image: 'catalogo_pagina/8.jpg', retailPrice: 1.20, wholesalePrice: 0.90, bulkPrice: 0.72 },
+      { name: 'Set de girasol', image: 'catalogo_pagina/9.jpg', retailPrice: 8.00, wholesalePrice: 6.00, bulkPrice: 4.80 },
+      { name: 'Caja de regalo con flor eterna', image: 'catalogo_pagina/9.jpg', retailPrice: 10.00, wholesalePrice: 7.50, bulkPrice: 6.00 },
+      { name: 'Protector de tarjeta', image: 'catalogo_pagina/10.jpg', retailPrice: 1.00, wholesalePrice: 0.75, bulkPrice: 0.60 },
+      { name: 'Anillo princesa', image: 'catalogo_pagina/10.jpg', retailPrice: 1.00, wholesalePrice: 0.75, bulkPrice: 0.60 },
+      { name: 'Collar trébol', image: 'catalogo_pagina/11.jpg', retailPrice: 7.00, wholesalePrice: 5.25, bulkPrice: 4.20 },
+      { name: 'Lentes', image: 'catalogo_pagina/11.jpg', retailPrice: 3.00, wholesalePrice: 2.25, bulkPrice: 1.80 },
+      { name: 'Pulsera trébol', image: 'catalogo_pagina/12.jpg', retailPrice: 5.00, wholesalePrice: 3.75, bulkPrice: 3.00 },
+      { name: 'Vendas para boxeo', image: 'catalogo_pagina/12.jpg', retailPrice: 8.00, wholesalePrice: 6.00, bulkPrice: 4.80 },
+      { name: 'Anillos de gato para pareja', image: 'catalogo_pagina/13.jpg', retailPrice: 2.00, wholesalePrice: 1.50, bulkPrice: 1.20 },
+      { name: 'Gorro satín', image: 'catalogo_pagina/13.jpg', retailPrice: 3.00, wholesalePrice: 2.25, bulkPrice: 1.80 },
+      { name: 'Collar de gato para parejas', image: 'catalogo_pagina/14.jpg', retailPrice: 5.00, wholesalePrice: 3.75, bulkPrice: 3.00 },
+      { name: 'Medias de tulipán', image: 'catalogo_pagina/14.jpg', retailPrice: 2.00, wholesalePrice: 1.50, bulkPrice: 1.20 },
+      { name: 'Collar de tulipán ($4)', image: 'catalogo_pagina/15.jpg', retailPrice: 4.00, wholesalePrice: 3.00, bulkPrice: 2.40 },
+      { name: 'Medias meme', image: 'catalogo_pagina/15.jpg', retailPrice: 2.00, wholesalePrice: 1.50, bulkPrice: 1.20 },
+      { name: 'Lomo Cards', image: 'catalogo_pagina/16.jpg', retailPrice: 5.00, wholesalePrice: 3.75, bulkPrice: 3.00 },
+      { name: 'Collar de princesa', image: 'catalogo_pagina/16.jpg', retailPrice: 5.00, wholesalePrice: 3.75, bulkPrice: 3.00 },
+      { name: 'Zarcillos de tulipán', image: 'catalogo_pagina/17.jpg', retailPrice: 3.00, wholesalePrice: 2.25, bulkPrice: 1.80 },
+      { name: 'Guantes de MMA', image: 'catalogo_pagina/17.jpg', retailPrice: 15.00, wholesalePrice: 11.25, bulkPrice: 9.00 },
+      { name: 'Reloj de bolsillo Gravity Falls', image: 'catalogo_pagina/18.jpg', retailPrice: 6.00, wholesalePrice: 4.50, bulkPrice: 3.60 },
+      { name: 'Diadema', image: 'catalogo_pagina/18.jpg', retailPrice: 2.00, wholesalePrice: 1.50, bulkPrice: 1.20 },
+      { name: 'Anillos de acero inoxidable', image: 'catalogo_pagina/19.jpg', retailPrice: 1.00, wholesalePrice: 0.75, bulkPrice: 0.60 },
+      { name: 'Pulseras de gato para parejas', image: 'catalogo_pagina/20.jpg', retailPrice: 3.00, wholesalePrice: 2.25, bulkPrice: 1.80 },
+      { name: 'Estuches para joyería ($1.50)', image: 'catalogo_pagina/21.jpg', retailPrice: 1.50, wholesalePrice: 1.12, bulkPrice: 0.90 },
+      { name: 'Bolsas de regalo', image: 'catalogo_pagina/22.jpg', retailPrice: 1.00, wholesalePrice: 0.75, bulkPrice: 0.60 },
+      { name: 'Posters', image: 'catalogo_pagina/23.jpg', retailPrice: 1.00, wholesalePrice: 0.75, bulkPrice: 0.60 }
     ];
 
     const grid = document.getElementById('product-grid');
